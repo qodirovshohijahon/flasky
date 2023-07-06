@@ -12,7 +12,7 @@ pipeline {
           checkout(
             [
                 $class: 'GitSCM',
-                branches: [[name: ' * /main']], 
+                branches: [[name: ' * /master']], 
                 extensions: [], 
                 userRemoteConfigs: [[url: 'https://github.com/qodirovshohijahon/flasky.git']]
             ]
