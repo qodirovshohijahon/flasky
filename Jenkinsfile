@@ -25,8 +25,9 @@ pipeline {
         sh '''
             python3 -m venv venv
             . venv/bin/activate
-            pip install pytest
+            pip install --upgrade pip
             pip install --upgrade setuptools
+            pip install pytest
             pip cache purge
             pip install psycopg2==2.7.3
             pip install -r requirements.txt
