@@ -19,7 +19,7 @@ pipeline {
         )
       }
     }
-    stage('Test') {
+    stage('Activating and Installing Tools') {
       steps {
         // Set up Python virtual environment
         sh '''
@@ -34,6 +34,15 @@ pipeline {
         // sh 'pytest'
       }
     }
+
+    stage('Testing') {
+      steps {
+        sh 'pip install -r requirements.txt'
+        // Run tests
+        sh 'pytest'
+      }
+    }
+
 
     // stage('Build and Push Docker Image') {
     //   steps {
