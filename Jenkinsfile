@@ -26,6 +26,8 @@ pipeline {
             python3 -m venv venv
             . venv/bin/activate
             pip install pytest
+            pip install -r requirements.txt
+
         '''
         // sh '. venv/bin/activate #source venv/bin/activate'
         // Install dependencies
@@ -38,7 +40,6 @@ pipeline {
     stage('Installing dependencies and Running Tests') {
       steps {
         sh '''
-            pip install -r requirements.txt
             pytest
         '''
       }
