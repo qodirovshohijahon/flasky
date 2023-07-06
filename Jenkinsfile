@@ -26,6 +26,7 @@ pipeline {
             python3 -m venv venv
             . venv/bin/activate
             pip install pytest
+            pip install --upgrade setuptools
             pip install -r requirements.txt
 
         '''
