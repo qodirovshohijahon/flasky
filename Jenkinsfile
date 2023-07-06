@@ -28,10 +28,8 @@ pipeline {
             pip install pytest
         '''
         // sh '. venv/bin/activate #source venv/bin/activate'
-        
         // Install dependencies
         // sh 'pip install -r requirements.txt'
-        
         // Run tests
         // sh 'pytest'
       }
