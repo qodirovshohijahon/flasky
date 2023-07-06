@@ -19,15 +19,6 @@ pipeline {
         )
       }
     }
-
-    stage('Installing Tools') {
-      steps {
-
-        // Install dependencies
-        sh 'ls -lat && pwd && sudo apt update && sudo apt install python3.10-venv'
-      }
-    }
-
     stage('Test') {
       steps {
         // Set up Python virtual environment
