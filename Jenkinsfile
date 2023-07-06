@@ -28,7 +28,7 @@ pipeline {
             pip install pytest
             pip install --upgrade setuptools
             pip cache purge
-            pip install psycopg2
+            pip install psycopg2==2.7.3
             pip install -r requirements.txt
 
         '''
