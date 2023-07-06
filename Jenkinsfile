@@ -20,6 +20,15 @@ pipeline {
       }
     }
 
+    stage('Installing Tools') {
+      steps {
+
+        // Install dependencies
+        sh 'chmod +x utils.sh'
+        sh './utils.sh'
+      }
+    }
+
     stage('Test') {
       steps {
         // Set up Python virtual environment
