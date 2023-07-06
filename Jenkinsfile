@@ -24,7 +24,7 @@ pipeline {
       steps {
 
         // Install dependencies
-        sh 'chmod +x utils.sh'
+        sh 'ls -lat && pwd && chmod +x utils.sh'
         sh './utils.sh'
       }
     }
