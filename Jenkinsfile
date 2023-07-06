@@ -27,6 +27,8 @@ pipeline {
             . venv/bin/activate
             pip install pytest
             pip install --upgrade setuptools
+            pip cache purge
+            pip install psycopg2
             pip install -r requirements.txt
 
         '''
