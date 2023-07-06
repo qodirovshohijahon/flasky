@@ -35,11 +35,12 @@ pipeline {
       }
     }
 
-    stage('Testing') {
+    stage('Installing dependencies and Running Tests') {
       steps {
-        sh 'pip install -r requirements.txt'
-        // Run tests
-        sh 'pytest'
+        sh '''
+            pip install -r requirements.txt
+            pytest
+        '''
       }
     }
 
