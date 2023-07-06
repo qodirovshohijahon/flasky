@@ -22,7 +22,11 @@ pipeline {
     stage('Test') {
       steps {
         // Set up Python virtual environment
-        sh 'python3 -m venv venv'
+        sh '''
+            python3 -m venv venv
+            source venv/bin/activate
+            pip install pytest
+        '''
         // sh '. venv/bin/activate #source venv/bin/activate'
         
         // Install dependencies
