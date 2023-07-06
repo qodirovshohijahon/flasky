@@ -24,8 +24,7 @@ pipeline {
       steps {
 
         // Install dependencies
-        sh 'ls -lat && pwd && chmod +x utils.sh'
-        sh './utils.sh'
+        sh 'ls -lat && pwd && sudo apt update && sudo apt install python3.10-venv'
       }
     }
 
